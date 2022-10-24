@@ -6,7 +6,7 @@
 
 int main(char * args[])
 {
-    struct Bills bill;
+    Bills bill;
 
     time_t t;
     srand((unsigned)time(&t));
