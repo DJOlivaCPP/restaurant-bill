@@ -38,10 +38,10 @@ int main(int argc, char * argv[])
     bill.total = bill.mealCost + (bill.mealCost * bill.tipPercent) + (bill.mealCost * bill.taxPercent);
 
     printf("Bill for: %s\n", bill.meal);
-    printf("%s: $%lf\n", bill.meal, bill.mealCost);
-    printf("%lf\% Tip: $%lf\n", (bill.tipPercent*100), (bill.mealCost * bill.tipPercent));
-    printf("%lf\% Tax: $%lf\n", (bill.taxPercent*100), (bill.mealCost * bill.taxPercent));
-    printf("Total: $%lf\n", bill.total);
+    printf("%s: $%.2lf\n", bill.meal, bill.mealCost);
+    printf("%.2lf\% Tip: $%.2lf\n", (bill.tipPercent*100), (bill.mealCost * bill.tipPercent));
+    printf("%.2lf\% Tax: $%.2lf\n", (bill.taxPercent*100), (bill.mealCost * bill.taxPercent));
+    printf("Total: $%.2lf\n", bill.total);
 
     return 0;
 }
