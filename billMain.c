@@ -4,7 +4,7 @@
 #include <string.h>
 #include "bill.h"
 
-int main(int argc, char * args[])
+int main(int argc, char * argv[])
 {
     Bills bill;
 
@@ -32,8 +32,8 @@ int main(int argc, char * args[])
         break;
     }
 
-    bill.tipPercent = atoi(args[1]) / 100;
-    bill.taxPercent = atoi(args[2]) / 100;
+    bill.tipPercent = atof(argv[1]) / 100;
+    bill.taxPercent = atof(argv[2]) / 100;
 
     bill.total = bill.mealCost + (bill.mealCost * bill.tipPercent) + (bill.mealCost * bill.taxPercent);
 
