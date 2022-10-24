@@ -11,6 +11,8 @@ struct Bills{
     double total;
 }
 
+int main(char * args[]);
+
 int main(char * args[])
 {
     struct Bills bill;
