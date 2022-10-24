@@ -4,7 +4,7 @@
 #include <string.h>
 #include "bill.h"
 
-int main(char * args[])
+int main(int argc, char * args[])
 {
     Bills bill;
 
@@ -38,9 +38,9 @@ int main(char * args[])
     bill.total = bill.mealCost + (bill.mealCost * bill.tipPercent) + (bill.mealCost * bill.taxPercent);
 
     printf("Bill for: %s\n", bill.meal);
-    printf("%s: $%d\n", bill.meal, bill.mealCost);
-    printf("%d\% Tip: $%d\n", (bill.tipPercent*100), (bill.mealCost * bill.tipPercent));
-    printf("%d\% Tax: $%d\n", (bill.taxPercent*100), (bill.mealCost * bill.taxPercent));
+    printf("%s: $%f\n", bill.meal, bill.mealCost);
+    printf("%f\% Tip: $%f\n", (bill.tipPercent*100), (bill.mealCost * bill.tipPercent));
+    printf("%f\% Tax: $%f\n", (bill.taxPercent*100), (bill.mealCost * bill.taxPercent));
     printf("Total: $%d\n", bill.total);
 
     return 0;
