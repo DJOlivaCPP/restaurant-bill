@@ -2,16 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
-struct Bills{
-    char   meal[8];
-    double mealCost;
-    double tipPercent;
-    double taxPercent;
-    double total;
-}
-
-int main(char * args[]);
+#include "bill.h"
 
 int main(char * args[])
 {
