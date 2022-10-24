@@ -10,7 +10,7 @@ struct Bills{
     double total;
 }
 
-int maint()
+int main(char * args[])
 {
     struct Bills bill;
 
@@ -38,9 +38,16 @@ int maint()
         break;
     }
 
-    // after we need to take an input from the user for the tax rate and tip percent
+    bill.tipPercent = atoi(args[1]) / 100;
+    bill.taxPercent = atoi(args[2]) / 100;
 
-    // lastly we need to then use the inputs to print out a bill with the item, tax amount, tip amount, and the total
+    bill.total = bill.mealCost + (bill.mealCost * bill.tipPercent) + (bill.mealCost * bill.taxPercent);
 
-    return (0);
+    printf("Bill for: %s\n", bill.meal);
+    printf("%s: $%d\n", bill.meal, bill.mealCost);
+    printf("%d\% Tip: $%d\n", (bill.tipPercent*100), (bill.mealCost * bill.tipPercent));
+    printf("%d\% Tax: $%d\n", (bill.taxPercent*100), (bill.mealCost * bill.taxPercent));
+    printf("Total: $%d\n", bill.total);
+
+    return 0;
 }
